@@ -1,10 +1,11 @@
 const express = require("express");
 const PORT = 8080;
 const axios = require("axios");
+const cors = require("cors");
 require("dotenv").config();
 const { request } = require("express");
 const app = express();
-
+app.use(cors());
 app.get("/api/trending-week", (req, res) => {
   axios
     .get(

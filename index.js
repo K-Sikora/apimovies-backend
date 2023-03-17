@@ -5,7 +5,11 @@ const cors = require("cors");
 require("dotenv").config();
 const { request } = require("express");
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://musical-torrone-915153.netlify.app/",
+  })
+);
 app.get("/api/trending-week", (req, res) => {
   axios
     .get(

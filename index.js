@@ -5,11 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 const { request } = require("express");
 const app = express();
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+app.use(cors());
 app.get("/api/trending-week", (req, res) => {
   axios
     .get(

@@ -7,7 +7,7 @@ const { request } = require("express");
 const app = express();
 app.use(
   cors({
-    origin: "https://musical-torrone-915153.netlify.app",
+    origin: "*",
   })
 );
 app.get("/api/trending-week", (req, res) => {

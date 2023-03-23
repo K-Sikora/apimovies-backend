@@ -216,6 +216,35 @@ app.get("/api/tv/categories/:category/:page", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+app.get("/api/movie-random", (req, res) => {
+  axios
+    .get(
+      `https://api.themoviedb.org/3/discover/movie?api_key=${
+        process.env.API_KEY
+      }&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${parseInt(
+        Math.floor(Math.random() * 40) + 1
+      )}&with_watch_monetization_types=flatrate`
+    )
+    .then((response) => {
+      res.json(response.data);
+    })
+    .catch((err) => console.log(err));
+});
+app.get("/api/tv-random", (req, res) => {
+  axios
+    .get(
+      `https://api.themoviedb.org/3/discover/tv?api_key=${
+        process.env.API_KEY
+      }&language=en-US&sort_by=popularity.desc&page=${parseInt(
+        Math.floor(Math.random() * 30) + 1
+      )}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`
+    )
+    .then((response) => {
+      res.json(response.data);
+    })
+    .catch((err) => console.log(err));
+});
+
 app.listen(PORT, () => {
   console.log("Listening on port " + PORT);
 });

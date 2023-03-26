@@ -244,6 +244,16 @@ app.get("/api/tv-random", (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+app.get("/api/movie-advanced/:movieyear/:sort/:moviegenres", (req, res) => {
+  axios
+    .get(
+      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&language=en-US&sort_by=${req.params.sort}&include_adult=false&include_video=false&page=1&primary_release_year=${req.params.movieyear}&with_genres=${req.params.moviegenres}&with_watch_monetization_types=flatrate`
+    )
+    .then((response) => {
+      res.json(response.data);
+    })
+    .catch((err) => console.log(err));
+});
 
 app.listen(PORT, () => {
   console.log("Listening on port " + PORT);

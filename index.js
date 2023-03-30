@@ -254,6 +254,16 @@ app.get("/api/movie-advanced/:movieyear/:sort/:moviegenres", (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+app.get("/api/tv-advanced/:tvyear/:tvsort/:tvgenres", (req, res) => {
+  axios
+    .get(
+      `https://api.themoviedb.org/3/discover/tv?api_key=${process.env.API_KEY}&language=en-US&sort_by=${req.params.tvsort}&first_air_date_year=${req.params.tvyear}&page=1&with_genres=${req.params.tvgenres}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`
+    )
+    .then((response) => {
+      res.json(response.data);
+    })
+    .catch((err) => console.log(err));
+});
 
 app.listen(PORT, () => {
   console.log("Listening on port " + PORT);

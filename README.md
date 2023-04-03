@@ -1,4 +1,4 @@
-# Node.js with Express back-end for movies/tv-shows app
+# Node.js with Express backend for movies/tv shows app
 
 ![showcase-4](https://user-images.githubusercontent.com/105585380/229601880-cbf7bb06-663c-4846-b33b-733be2ca66cf.gif)
 
@@ -8,10 +8,11 @@
 ## Features:
 
 - Find a movie/show through Navbar Search
+- Find a movie/show through advanced search
+- Watch trailers of movies/shows (if exist)
 - Discover movies and shows through the Homepage
 - Read descriptions, keywords and genres of particular movie/show
-- Watch trailers of movies/shows
-- Find movies through genres/keywords
+- Find movies through genres
 - Find similar movies/shows
 
 ### Frontend link: https://github.com/K-Sikora/apimovies-frontend

@@ -1,23 +1,35 @@
 # Node.js with Express backend for movies/tv shows app
 
+This repository contains the backend code for a movie and TV show search application.
+
+
 ![gif-showcase](https://user-images.githubusercontent.com/105585380/229607443-9e1dcc42-ec08-49fd-bbe3-7bc600ad29e1.gif)
 
 
-### Live demo: https://musical-torrone-915153.netlify.app
 
-## Features:
+# Live demo
+### A live demo of this application can be found <a href="https://musical-torrone-915153.netlify.app">here</a> 
 
-- Find a movie/show through Navbar Search
-- Find a movie/show through advanced search
-- Watch trailers of movies/shows (if exist)
-- Discover movies and shows through the Homepage
-- Read descriptions, keywords and genres of particular movie/show
-- Find movies through genres
-- Find similar movies/shows
-- Change between dark and light mode
+# Features
+### The following features are available in this application:
+<ul>
+  <li><h4>Navbar Search:</h4> Search for movies and TV shows using the navbar search bar.</li>
+  <li><h4>Advanced Search:</h4> Find movies and TV shows using advanced search options such as release date, genres and type.</li>
+  <li><h4>Watch Trailers:</h4> Watch trailers of movies and TV shows (if available) directly on the application.</li>
+  <li><h4>Homepage Discover:</h4>Discover new movies and TV shows through the homepage.</li>
+  <li><h4>Description and Keywords:</h4>Read descriptions, keywords, and genres of particular movies and TV shows.</li>
+  <li><h4>Genre Search:</h4>Find movies and TV shows by genre.</li>
+  <li><h4>Similar Movies/Shows:</h4>Discover similar movies and TV shows based on the selected movie or TV show.</li>
+  <li><h4>Dark and Light Mode:</h4>Switch between dark and light mode for better viewing experience.</li>
 
-### Frontend link: https://github.com/K-Sikora/apimovies-frontend
+  
+</ul>
 
-### APIs used in this project:
+# Frontend Link
+### The frontend code for this application can be found <a href="https://github.com/K-Sikora/apimovies-frontend">here</a> 
 
-1. https://www.themoviedb.org/documentation/api
+# APIs Used
+### The following API was used to build this application:
+<ul>
+  <li><h4>The Movie Database API:</h4> This API was used to retrieve information about movies and TV shows, including descriptions, ratings, genres, and trailers. The API documentation can be found at: https://www.themoviedb.org/documentation/api</li>
+</ul>

@@ -5,9 +5,12 @@ const cors = require("cors");
 require("dotenv").config();
 const { request } = require("express");
 const app = express();
-app.use(
-  cors("https://watchable.rafte.ch", "https://watchable-app.netlify.app")
-);
+const corsOptions = {
+  origin: ["https://watchable.rafte.ch", "https://watchable-app.netlify.app"],
+};
+
+app.use(cors(corsOptions));
+
 app.get("/api/trending-week", (req, res) => {
   axios
     .get(

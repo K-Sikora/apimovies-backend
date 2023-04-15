@@ -1,15 +1,22 @@
 const express = require("express");
 const PORT = process.env.PORT || 8080;
 const axios = require("axios");
-const cors = require("cors");
 require("dotenv").config();
 const { request } = require("express");
 const app = express();
-const corsOptions = {
-  origin: ["https://watchable.rafte.ch", "https://watchable-app.netlify.app"],
-};
-
-app.use(cors(corsOptions));
+app.use((req, res, next) => {
+  const allowedOrigins = [
+    "https://watchable.rafte.ch",
+    "https://watchable-app.netlify.app",
+  ];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+  res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 
 app.get("/api/trending-week", (req, res) => {
   axios

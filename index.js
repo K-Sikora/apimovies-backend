@@ -7,7 +7,7 @@ const { request } = require("express");
 const app = express();
 
 const corsOptions = {
-  origin: ["https://watchable.rafte.ch", "watchable-app.netlify.app"],
+  origin: ["https://watchable.rafte.ch", "https://watchable-app.netlify.app"],
 };
 app.use(cors(corsOptions));
 
